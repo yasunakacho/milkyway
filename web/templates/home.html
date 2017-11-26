@@ -13,7 +13,7 @@
                         <thread>
                             <tr>
                                 <th>CRYPTOCURRENCY</th>
-                                <th>GROWTH SCORE</th>
+                                <th>GROWTH SCORE TEST</th>
                                 <th>PRICE</th>
                                 <th>1DAY CHANGE</th>
                                 <th>1WEEK CHANGE</th>
@@ -42,6 +42,18 @@
                                     <td>537.02%</td>
                                     <td>YES</td>
                                 </tr>
+                                {% for coin in result %}
+                                    <tr>
+                                        <th scope="row"><a href="/crypto/2">{{coin[0]}}</a></th>
+                                        <td>-</td>
+                                        <td>&#36;{{coin[1]}}</td>
+                                        <td>{{coin[2]}}&#37;</td>
+                                        <td>{{coin[3]}}&#37;</td>
+                                        <td>{{coin[4]}}&#37;</td>
+                                        <td>n/a</td>
+                                        <td>YES/NO</td>
+                                    </tr>
+                                {% endblock %}
                             </tbody>
                         </thread>
                     </table>
