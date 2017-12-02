@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -42,18 +43,20 @@
                                     <td>537.02%</td>
                                     <td>YES</td>
                                 </tr>
+                                <!--{{result}}-->
+
                                 {% for coin in result %}
                                     <tr>
-                                        <th scope="row"><a href="/crypto/2">{{coin[0]}}</a></th>
+                                        <th scope="row"><a href="/detail/{{coin.id}}">{{coin.name}}</a></th>
                                         <td>-</td>
-                                        <td>&#36;{{coin[1]}}</td>
-                                        <td>{{coin[2]}}&#37;</td>
-                                        <td>{{coin[3]}}&#37;</td>
-                                        <td>{{coin[4]}}&#37;</td>
+                                        <td>&#36;{{coin.price_usd}}</td>
+                                        <td>{{coin.percent_change_24h}}&#37;</td>
+                                        <td>{{coin.percent_change_7d}}&#37;</td>
+                                        <td>-</td>
                                         <td>n/a</td>
                                         <td>YES/NO</td>
                                     </tr>
-                                {% endblock %}
+                                {% endfor %}
                             </tbody>
                         </thread>
                     </table>
