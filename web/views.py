@@ -26,8 +26,7 @@ def detail(request, id):
     market = coinmarketcap.Market()
     json_result = market.ticker(id, limit=10, convert='USD')
 
-
-    return render(request, 'detail.html', {'json_result':json_result})
+    return render(request, 'detail.html', {'json_result':json_result[0]})
 
 
 
