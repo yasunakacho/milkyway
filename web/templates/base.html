@@ -1,49 +1,19 @@
-{% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block page %}
-    <div class="container">
-        <div class="row">
-            <ui>The Big Day|Add the Milky Way Trade Platform to your trading</ui>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="jumbotron">
-                <h1>{{json_result.name}}</h1>
-                <p>{{json_result}}</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="jumbotron">
-                <div class="col-md-8">
-                    <p>{{json_result}}</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="jumbotron">
-                    <p>{{json_result}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/img/favicon.png">
-    <title>Maisonnette</title>
-    <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
-    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+    <link rel="shortcut icon" href="static/img/favicon.png">
+    <title>Milky Way Analytics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" href="static/css/app.css" type="text/css"/>
   </head>
   <body>
     <nav class="navbar navbar-expand navbar-dark mai-top-header">
@@ -52,7 +22,7 @@
         <ul class="nav navbar-nav mai-top-nav">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Services <span class="angle-down s7-angle-down"></span></a>
+          <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Services <span class="angle-down s7-angle-down"> </span></a>
             <div role="menu" class="dropdown-menu"><a href="#" class="dropdown-item">Information</a><a href="#" class="dropdown-item">Company</a><a href="#" class="dropdown-item">Documentation</a><a href="#" class="dropdown-item">API Settings</a><a href="#" class="dropdown-item">Export Info</a></div>
           </li>
           <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
@@ -67,16 +37,16 @@
                   <div class="content">
                     <ul>
                       <li><a href="#">
-                          <div class="img"><img src="assets/img/avatars/img1.jpg"></div>
+                          <div class="img"><img src="static/img/avatars/img1.jpg"></div>
                           <div class="content"><span class="date">16 Sept</span><span class="name">Victor Jara</span><span class="desc">The song that has been brave, will always be the new song. </span></div></a></li>
                       <li><a href="#">
-                          <div class="img"><img src="assets/img/avatars/img2.jpg"></div>
+                          <div class="img"><img src="static/img/avatars/img2.jpg"></div>
                           <div class="content"><span class="date">4 Sept</span><span class="name">Gustavo Cerati</span><span class="desc">You will see me fly across the city of fury where no one knows of me.</span></div></a></li>
                       <li><a href="#">
-                          <div class="img"><img src="assets/img/avatars/img3.jpg"></div>
+                          <div class="img"><img src="static/img/avatars/img3.jpg"></div>
                           <div class="content"><span class="date">13 Aug</span><span class="name">Jaime Garzón</span><span class="desc">Now everything came back to the abnormality.</span></div></a></li>
                       <li><a href="#">
-                          <div class="img"><img src="assets/img/avatars/img4.jpg"></div>
+                          <div class="img"><img src="static/img/avatars/img4.jpg"></div>
                           <div class="content"><span class="date">13 Aug</span><span class="name">Allen Collins</span><span class="desc">Things just couldn't even be the same 'Cause I'm as free as a bird now.</span></div></a></li>
                     </ul>
                   </div>
@@ -157,7 +127,7 @@
         </ul>
         <!--User Menu-->
         <ul class="nav navbar-nav float-lg-right mai-user-nav">
-          <li class="dropdown nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link"> <img src="assets/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span></a>
+          <li class="dropdown nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link"> <img src="static/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span></a>
             <div role="menu" class="dropdown-menu"><a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>My Account</a><a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Profile</a><a href="#" class="dropdown-item"> <span class="icon s7-cash"> </span>Billing</a><a href="#" class="dropdown-item"> <span class="icon s7-tools"> </span>Settings</a><a href="#" class="dropdown-item"> <span class="icon s7-power"> </span>Log Out</a></div>
           </li>
         </ul>
@@ -207,11 +177,11 @@
                                                   </li>
                                       </ul>
                                     </li>
-                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-diamond"></span><span>Tables</span></a>
+                                    <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-diamond"></span><span>Tables</span></a>
                                       <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                                   <li class="nav-item"><a href="tables-general.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">General</span></a>
                                                   </li>
-                                                  <li class="nav-item"><a href="tables-datatables.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">Data Tables</span></a>
+                                                  <li class="nav-item"><a href="tables-datatables.html" class="nav-link active"><span class="icon s7-box2"></span><span class="name">Data Tables</span></a>
                                                   </li>
                                                   <li class="nav-item"><a href="tables-filters.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">Filters</span></a>
                                                   </li>
@@ -243,9 +213,9 @@
                                                   </li>
                                       </ul>
                                     </li>
-                                    <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-display1"></span><span>Charts</span></a>
+                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-display1"></span><span>Charts</span></a>
                                       <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="charts-flot.html" class="nav-link active"><span class="icon s7-graph"></span><span class="name">Flot</span></a>
+                                                  <li class="nav-item"><a href="charts-flot.html" class="nav-link"><span class="icon s7-graph"></span><span class="name">Flot</span></a>
                                                   </li>
                                                   <li class="nav-item"><a href="charts-sparklines.html" class="nav-link"><span class="icon s7-graph1"></span><span class="name">Sparklines</span></a>
                                                   </li>
@@ -268,7 +238,7 @@
                                                                   </div>
                                                                   <div class="mai-mega-menu-column">
                                                                               <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-keypad"></span><span>Tables</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="tables-general.html" class="dropdown-item">General</a><a href="tables-datatables.html" class="dropdown-item">Datatables</a>
+                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="tables-general.html" class="dropdown-item">General</a><a href="tables-datatables.html" class="dropdown-item active">Datatables</a>
                                                                                 </div>
                                                                               </div>
                                                                   </div>
@@ -304,223 +274,34 @@
           </div>
         </div>
       </nav>
-      <div class="main-content container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Chart Table</span><span class="description">This is a table widget with a chart inside</span>
-              </div>
-              <div class="widget-chart-container">
-                <div id="line-chart3" style="height: 220px;"></div>
-                <div class="chart-table pt-3">
-                  <table class="table table-striped">
-                    <thead class="primary">
-                      <tr>
-                        <th>Active Users</th>
-                        <th class="number">Week</th>
-                        <th class="number">Month</th>
-                        <th class="number">Year</th>
-                      </tr>
-                    </thead>
-                    <tbody class="no-border-x">
-                      <tr>
-                        <td>Windows</td>
-                        <td class="number">349</td>
-                        <td class="number">1930</td>
-                        <td class="number">14358</td>
-                      </tr>
-                      <tr>
-                        <td>Mac OS</td>
-                        <td class="number">286</td>
-                        <td class="number">1742</td>
-                        <td class="number">13273</td>
-                      </tr>
-                      <tr>
-                        <td>Linux</td>
-                        <td class="number">212</td>
-                        <td class="number">1249</td>
-                        <td class="number">9653</td>
-                      </tr>
-                      <tr>
-                        <td>Android</td>
-                        <td class="number">450</td>
-                        <td class="number">2063</td>
-                        <td class="number">24927</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Chart Table</span><span class="description">This is a table widget with a chart inside</span>
-              </div>
-              <div class="widget-chart-container">
-                <div id="bar-chart2" style="height: 220px;"></div>
-                <div class="chart-table pt-3">
-                  <table class="table table-striped">
-                    <thead class="primary">
-                      <tr>
-                        <th>Operating System</th>
-                        <th class="number">Visits</th>
-                        <th class="number">Users</th>
-                        <th class="number">Rebound</th>
-                      </tr>
-                    </thead>
-                    <tbody class="no-border-x">
-                      <tr>
-                        <td>Windows</td>
-                        <td class="number">340</td>
-                        <td class="number">186</td>
-                        <td class="number">51%</td>
-                      </tr>
-                      <tr>
-                        <td>Mac OS</td>
-                        <td class="number">280</td>
-                        <td class="number">145</td>
-                        <td class="number">64%</td>
-                      </tr>
-                      <tr>
-                        <td>Linux</td>
-                        <td class="number">210</td>
-                        <td class="number">89</td>
-                        <td class="number">38%</td>
-                      </tr>
-                      <tr>
-                        <td>Android</td>
-                        <td class="number">176</td>
-                        <td class="number">67</td>
-                        <td class="number">57%	</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Line Chart</span>
-              </div>
-              <div class="widget-chart-container">
-                <div class="counter">
-                  <div class="value">20%</div>
-                  <div class="desc">More Sales</div>
-                </div>
-                <div id="line-chart1" style="height: 230px;"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Pie Chart</span>
-              </div>
-              <div class="widget-chart-container">
-                <div id="pie-chart4" style="height: 200px;"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Bar Chart</span>
-              </div>
-              <div class="widget-chart-container">
-                <div class="counter">
-                  <div class="value">80%</div>
-                  <div class="desc">More Clients</div>
-                </div>
-                <div id="bar-chart1" style="height: 230px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Fullwidth Wave</span>
-              </div>
-              <div class="widget-chart-container">
-                <div class="counter">
-                  <div class="value">25.3K</div>
-                  <div class="desc">Total Visitors</div>
-                </div>
-                <div id="linechart-mini1" style="height: 230px;"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Live Data</span>
-              </div>
-              <div class="widget-chart-container">
-                <div id="live-data" style="height: 230px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth">
-              <div class="widget-head">
-                <div class="tools"><span class="icon mdi mdi-chevron-down"></span><span class="icon mdi mdi-refresh-sync"></span><span class="icon mdi mdi-close"></span></div><span class="title">Without Points</span>
-              </div>
-              <div class="widget-chart-container">
-                <div class="counter">
-                  <div class="value">15%</div>
-                  <div class="desc">New Conversions</div>
-                </div>
-                <div id="line-chart-live" style="height: 250px;"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget widget-fullwidth line-chart">
-              <div class="widget-head">
-                <div class="tools"><span class="icon s7-cloud-download"></span><span class="icon s7-refresh-2"></span></div><span class="title">Filled Points</span>
-              </div>
-              <div class="widget-chart-container">
-                <div class="counter">
-                  <div class="value">22%</div>
-                  <div class="desc">Free Space</div>
-                </div>
-                <div id="line-chart2" style="height: 250px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-    <script src="assets/js/app-charts.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-      	//initialize the javascript
-      	App.init();
-      	App.charts();
-      });
-    </script>
+
+      {% block page %}
+      {% endblock %}
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="static/lib/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="static/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+  <script src="static/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="static/js/app.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+  <script src="static/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+  <script src="static/js/app-tables-datatables.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+        App.dataTables();
+    });
+  </script>
   </body>
 </html>
-{% endblock %}
