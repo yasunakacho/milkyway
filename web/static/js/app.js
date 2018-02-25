@@ -7,7 +7,7 @@ var App = (function () {
   var config = {//Basic Config
     animate: false,
     popover: true,
-    assetsPath: 'assets',
+    staticPath: 'static',
     imgPath: 'img',
     jsPath: 'js',
     libsPath: 'lib',
